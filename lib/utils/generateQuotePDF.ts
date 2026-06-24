@@ -72,7 +72,7 @@ export async function generateQuotePDF(quote: QuoteWithItems): Promise<void> {
   doc.setFontSize(8);
   doc.setTextColor(...GRAY);
   doc.text(
-    "Tel: +54 381 XXXX-XXXX   |   TU-EMAIL@dominio.com   |   @TU_INSTAGRAM",
+    "Tel: +54 381 206 7869   |   arachistuc@gmail.com   |   @arachis.tucuman",
     ML + 42,
     24.5
   );

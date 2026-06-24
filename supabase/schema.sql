@@ -628,8 +628,8 @@ CREATE TABLE IF NOT EXISTS public.promo_settings (
 -- Defaults
 -- TODO: reemplazar por los datos de la marca nueva
 INSERT INTO public.promo_settings (key, value) VALUES
-  ('phone',      'TU-TELEFONO'),
-  ('portal_url', 'https://TU-DOMINIO/pedidos')
+  ('phone',      '381 206 7869'),
+  ('portal_url', 'https://www.arachis.com.ar/pedidos')
 ON CONFLICT (key) DO NOTHING;
 
 -- 2. Placas guardadas

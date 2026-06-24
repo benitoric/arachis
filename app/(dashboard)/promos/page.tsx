@@ -394,8 +394,8 @@ export default function PromosPage() {
   const [itemPrices, setItemPrices] = useState<Record<string, string>>({});
 
   // Settings
-  const [settingsPhone, setSettingsPhone] = useState("TU-TELEFONO");
-  const [settingsPortalUrl, setSettingsPortalUrl] = useState("https://TU-DOMINIO/pedidos");
+  const [settingsPhone, setSettingsPhone] = useState("381 206 7869");
+  const [settingsPortalUrl, setSettingsPortalUrl] = useState("https://www.arachis.com.ar/pedidos");
   const [savingSettings, setSavingSettings] = useState(false);
 
   // Saved promos list
@@ -979,7 +979,7 @@ export default function PromosPage() {
                     type="text"
                     value={settingsPhone}
                     onChange={(e) => setSettingsPhone(e.target.value)}
-                    placeholder="TU-TELEFONO"
+                    placeholder="381 206 7869"
                     className="w-full border border-gray-200 rounded-lg pl-9 pr-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-200"
                   />
                 </div>
@@ -997,7 +997,7 @@ export default function PromosPage() {
                     type="url"
                     value={settingsPortalUrl}
                     onChange={(e) => setSettingsPortalUrl(e.target.value)}
-                    placeholder="https://TU-DOMINIO/pedidos"
+                    placeholder="https://www.arachis.com.ar/pedidos"
                     className="w-full border border-gray-200 rounded-lg pl-9 pr-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-200"
                   />
                 </div>
