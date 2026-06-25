@@ -227,7 +227,7 @@ export default function ClientForm({ initialData, mode }: ClientFormProps) {
         <button
           type="submit"
           disabled={loading}
-          className="inline-flex items-center gap-2 bg-chocolate hover:bg-dark-red text-white px-5 py-2.5 rounded-lg font-medium text-sm transition-colors shadow-sm disabled:opacity-50 disabled:cursor-not-allowed"
+          className="inline-flex items-center gap-2 bg-brand hover:bg-brand-dark text-ink px-5 py-2.5 rounded-lg font-medium text-sm transition-colors shadow-sm disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {loading ? <Loader2 size={15} className="animate-spin" /> : <Save size={15} />}
           {loading ? "Guardando..." : mode === "create" ? "Crear cliente" : "Guardar cambios"}

@@ -63,7 +63,7 @@ export default function EditOrderPage() {
         <button
           onClick={() => router.push(`/orders/${id}`)}
           className="text-sm font-medium hover:underline"
-          style={{ color: "#49789d" }}
+          style={{ color: "#a9760a" }}
         >
           Volver al pedido
         </button>

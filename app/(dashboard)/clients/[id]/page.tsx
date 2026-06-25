@@ -122,7 +122,7 @@ export default async function ClientDetailPage({
           </div>
           <Link
             href={`/clients/${id}/edit`}
-            className="inline-flex items-center gap-2 bg-chocolate hover:bg-dark-red text-white px-4 py-2.5 rounded-lg font-medium text-sm transition-colors shadow-sm"
+            className="inline-flex items-center gap-2 bg-brand hover:bg-brand-dark text-ink px-4 py-2.5 rounded-lg font-medium text-sm transition-colors shadow-sm"
           >
             <Edit2 size={15} />
             Editar cliente

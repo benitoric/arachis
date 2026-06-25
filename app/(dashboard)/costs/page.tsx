@@ -930,7 +930,7 @@ export default function CostsPage() {
               onClick={handleSavePriceList}
               disabled={busy}
               className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-medium text-white disabled:opacity-50 transition-colors"
-              style={{ backgroundColor: "#49789d" }}
+              style={{ backgroundColor: "#a9760a" }}
             >
               {savingHistory ? <Loader2 size={14} className="animate-spin" /> : <History size={14} />}
               Guardar lista de precios
@@ -971,7 +971,7 @@ export default function CostsPage() {
               onClick={handleSaveManualCosts}
               disabled={savingMaterials || loading}
               className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-medium text-white disabled:opacity-50 transition-colors"
-              style={{ backgroundColor: "#49789d" }}
+              style={{ backgroundColor: "#a9760a" }}
             >
               {savingMaterials ? <Loader2 size={14} className="animate-spin" /> : <Save size={14} />}
               Guardar precios manuales

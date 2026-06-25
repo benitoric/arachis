@@ -378,7 +378,7 @@ export default function DashboardPage() {
 
       {/* Stat cards */}
       <div className="grid grid-cols-2 xl:grid-cols-4 gap-4 mb-6">
-        <StatCard title="A entregar" value={toDeliver} subtitle="Pendientes y confirmados" icon={ShoppingBag} bg="#49789d" loading={loading} />
+        <StatCard title="A entregar" value={toDeliver} subtitle="Pendientes y confirmados" icon={ShoppingBag} bg="#a9760a" loading={loading} />
         <StatCard title="Saldo pendiente" value={loading ? 0 : fmt(pendingBalance)} subtitle="Entregados sin cobrar" icon={DollarSign} bg="#e8a95a" loading={loading} />
         <StatCard title="Insumos críticos" value={criticalStock} subtitle="Bajo stock mínimo" icon={AlertTriangle} bg="#E8475F" loading={loading} />
         <StatCard title="Pedidos portal" value={unreadCount} subtitle="Pendientes de confirmar" icon={Bell} bg="#6b7280" loading={loading} />
@@ -391,12 +391,12 @@ export default function DashboardPage() {
         <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-5">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ backgroundColor: "#e8f0f7" }}>
-                <ShoppingBag size={15} style={{ color: "#49789d" }} />
+              <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ backgroundColor: "#f6f5f1" }}>
+                <ShoppingBag size={15} style={{ color: "#a9760a" }} />
               </div>
               <h2 className="font-semibold text-gray-900">A entregar</h2>
             </div>
-            <button onClick={() => router.push("/orders")} className="text-xs font-medium hover:underline" style={{ color: "#49789d" }}>Ver todos</button>
+            <button onClick={() => router.push("/orders")} className="text-xs font-medium hover:underline" style={{ color: "#a9760a" }}>Ver todos</button>
           </div>
           {loading ? (
             <div className="flex items-center justify-center py-8"><Loader2 size={20} className="animate-spin text-gray-200" /></div>
@@ -472,7 +472,7 @@ export default function DashboardPage() {
               </div>
               <div className="mt-3 pt-2 border-t border-gray-50">
                 <button onClick={() => router.push("/finances?tab=resultado")}
-                  className="text-xs font-medium hover:underline" style={{ color: "#49789d" }}>
+                  className="text-xs font-medium hover:underline" style={{ color: "#a9760a" }}>
                   Ver detalle completo →
                 </button>
               </div>
@@ -493,7 +493,7 @@ export default function DashboardPage() {
               </div>
               <h2 className="font-semibold text-gray-900">A cobrar</h2>
             </div>
-            <button onClick={() => router.push("/finances")} className="text-xs font-medium hover:underline" style={{ color: "#49789d" }}>Ver finanzas</button>
+            <button onClick={() => router.push("/finances")} className="text-xs font-medium hover:underline" style={{ color: "#a9760a" }}>Ver finanzas</button>
           </div>
           {loading ? (
             <div className="flex items-center justify-center py-8"><Loader2 size={20} className="animate-spin text-gray-200" /></div>
@@ -527,7 +527,7 @@ export default function DashboardPage() {
                 <span className="bg-amber-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">{portalOrders.length}</span>
               )}
             </div>
-            <button onClick={() => router.push("/orders")} className="text-xs font-medium hover:underline" style={{ color: "#49789d" }}>Ver todos</button>
+            <button onClick={() => router.push("/orders")} className="text-xs font-medium hover:underline" style={{ color: "#a9760a" }}>Ver todos</button>
           </div>
           {loading ? (
             <div className="flex items-center justify-center py-8"><Loader2 size={20} className="animate-spin text-gray-200" /></div>
@@ -570,7 +570,7 @@ export default function DashboardPage() {
               </div>
               <h2 className="font-semibold text-gray-900">Insumos críticos</h2>
             </div>
-            <button onClick={() => router.push("/stock")} className="text-xs font-medium hover:underline" style={{ color: "#49789d" }}>Ver stock</button>
+            <button onClick={() => router.push("/stock")} className="text-xs font-medium hover:underline" style={{ color: "#a9760a" }}>Ver stock</button>
           </div>
           {loading ? (
             <div className="flex items-center justify-center py-8"><Loader2 size={20} className="animate-spin text-gray-200" /></div>
@@ -598,8 +598,8 @@ export default function DashboardPage() {
         {/* Ventas chart */}
         <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-5">
           <div className="flex items-center gap-2 mb-4">
-            <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ backgroundColor: "#e8f0f7" }}>
-              <TrendingUp size={15} style={{ color: "#49789d" }} />
+            <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ backgroundColor: "#f6f5f1" }}>
+              <TrendingUp size={15} style={{ color: "#a9760a" }} />
             </div>
             <h2 className="font-semibold text-gray-900">Ventas — últimos 12 meses</h2>
           </div>
@@ -615,7 +615,7 @@ export default function DashboardPage() {
                   formatter={(value) => [fmt(value as number), "Ventas"]}
                   contentStyle={{ borderRadius: "8px", border: "1px solid #f0f0f0", fontSize: "12px" }}
                 />
-                <Bar dataKey="ventas" fill="#49789d" radius={[4, 4, 0, 0]} />
+                <Bar dataKey="ventas" fill="#a9760a" radius={[4, 4, 0, 0]} />
               </BarChart>
             </ResponsiveContainer>
           )}
@@ -635,7 +635,7 @@ export default function DashboardPage() {
                 {pendingPurchases.length}
               </span>
             </div>
-            <button onClick={() => router.push("/purchases")} className="text-xs font-medium hover:underline" style={{ color: "#49789d" }}>
+            <button onClick={() => router.push("/purchases")} className="text-xs font-medium hover:underline" style={{ color: "#a9760a" }}>
               Ver compras
             </button>
           </div>

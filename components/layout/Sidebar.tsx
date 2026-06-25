@@ -6,6 +6,7 @@ import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
 import { usePortalCount } from "@/contexts/PortalCountContext";
+import ThemeToggle from "@/components/layout/ThemeToggle";
 import {
   LayoutDashboard,
   Users,
@@ -90,7 +91,7 @@ export default function Sidebar() {
       {/* Botón hamburguesa — solo mobile */}
       <button
         className="lg:hidden fixed top-3 left-3 z-50 w-10 h-10 flex items-center justify-center rounded-xl shadow-lg text-white"
-        style={{ backgroundColor: "#2a4a63" }}
+        style={{ backgroundColor: "#1a1b1f" }}
         onClick={() => setOpen(true)}
         aria-label="Abrir menú"
       >
@@ -109,7 +110,7 @@ export default function Sidebar() {
       <aside
         className={`fixed inset-y-0 left-0 w-56 flex flex-col z-40 shadow-xl transition-transform duration-300
           ${open ? "translate-x-0" : "-translate-x-full lg:translate-x-0"}`}
-        style={{ backgroundColor: "#2a4a63" }}
+        style={{ backgroundColor: "#1a1b1f" }}
       >
         {/* Logo + botón cerrar (mobile) */}
         <div className="flex items-center justify-between px-4 py-6 border-b border-white/10">
@@ -147,16 +148,16 @@ export default function Sidebar() {
                       transition-all duration-150 group
                       ${
                         active
-                          ? "text-white shadow-sm"
+                          ? "text-ink shadow-sm"
                           : "text-white/60 hover:text-white hover:bg-white/10"
                       }
                     `}
-                    style={active ? { backgroundColor: "#49789d" } : undefined}
+                    style={active ? { backgroundColor: "#F0B838" } : undefined}
                   >
                     <Icon
                       size={18}
                       className={`flex-shrink-0 ${
-                        active ? "text-white" : "text-white/40 group-hover:text-white"
+                        active ? "text-ink" : "text-white/40 group-hover:text-white"
                       }`}
                     />
                     <span className="flex-1">{item.label}</span>
@@ -166,7 +167,7 @@ export default function Sidebar() {
                       </span>
                     )}
                     {active && !showBadge && (
-                      <ChevronRight size={14} className="text-white/60" />
+                      <ChevronRight size={14} className="text-ink/60" />
                     )}
                   </Link>
                 </li>
@@ -175,8 +176,9 @@ export default function Sidebar() {
           </ul>
         </nav>
 
-        {/* Logout */}
-        <div className="p-3 border-t border-white/10">
+        {/* Theme + Logout */}
+        <div className="p-3 border-t border-white/10 space-y-0.5">
+          <ThemeToggle />
           <button
             onClick={handleLogout}
             className="flex items-center gap-3 w-full px-3 py-2.5 rounded-lg text-sm font-medium text-white/50 hover:text-white hover:bg-white/10 transition-all duration-150"

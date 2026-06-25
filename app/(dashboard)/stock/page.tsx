@@ -494,7 +494,7 @@ export default function StockPage() {
               ? "text-white shadow-sm"
               : "text-gray-500 hover:text-gray-700 hover:bg-gray-50"
           }`}
-          style={tab === "materials" ? { backgroundColor: "#49789d" } : undefined}
+          style={tab === "materials" ? { backgroundColor: "#a9760a" } : undefined}
         >
           <Package size={15} />
           Insumos
@@ -506,7 +506,7 @@ export default function StockPage() {
               ? "text-white shadow-sm"
               : "text-gray-500 hover:text-gray-700 hover:bg-gray-50"
           }`}
-          style={tab === "products" ? { backgroundColor: "#49789d" } : undefined}
+          style={tab === "products" ? { backgroundColor: "#a9760a" } : undefined}
         >
           <Box size={15} />
           <span className="sm:hidden">Productos</span>

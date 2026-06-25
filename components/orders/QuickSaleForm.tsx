@@ -298,7 +298,7 @@ export default function QuickSaleForm() {
                             onClick={() => addQty(p.id, 1)}
                             disabled={noPrice}
                             className="w-9 h-9 inline-flex items-center justify-center rounded-lg text-white disabled:opacity-30 transition-colors"
-                            style={{ backgroundColor: "#49789d" }}
+                            style={{ backgroundColor: "#a9760a" }}
                           >
                             <Plus size={15} />
                           </button>
@@ -313,7 +313,7 @@ export default function QuickSaleForm() {
                 <span className="text-gray-500">
                   {itemCount} artículo{itemCount !== 1 ? "s" : ""}
                 </span>
-                <span className="font-bold" style={{ color: "#49789d" }}>{fmt(total)}</span>
+                <span className="font-bold" style={{ color: "#a9760a" }}>{fmt(total)}</span>
               </div>
             </>
           )}
@@ -337,7 +337,7 @@ export default function QuickSaleForm() {
                 className={`flex-1 py-2 rounded-lg border text-xs font-medium transition-colors ${
                   buyerMode === m ? "text-white border-transparent" : "border-gray-200 text-gray-600 hover:bg-gray-50"
                 }`}
-                style={buyerMode === m ? { backgroundColor: "#49789d" } : undefined}
+                style={buyerMode === m ? { backgroundColor: "#a9760a" } : undefined}
               >
                 {label}
               </button>
@@ -384,7 +384,7 @@ export default function QuickSaleForm() {
                     className={`flex-1 py-2 rounded-lg border text-xs font-medium capitalize transition-colors ${
                       method === m ? "text-white border-transparent" : "border-gray-200 text-gray-600 hover:bg-gray-50"
                     }`}
-                    style={method === m ? { backgroundColor: "#49789d" } : undefined}
+                    style={method === m ? { backgroundColor: "#a9760a" } : undefined}
                   >
                     {m}
                   </button>
@@ -405,7 +405,7 @@ export default function QuickSaleForm() {
                     className={`flex-1 py-2 rounded-lg border text-xs font-medium transition-colors ${
                       cobrado === v ? "text-white border-transparent" : "border-gray-200 text-gray-600 hover:bg-gray-50"
                     }`}
-                    style={cobrado === v ? { backgroundColor: v ? "#49789d" : "#d97706" } : undefined}
+                    style={cobrado === v ? { backgroundColor: v ? "#a9760a" : "#d97706" } : undefined}
                   >
                     {label}
                   </button>
@@ -471,7 +471,7 @@ export default function QuickSaleForm() {
                     step={0.01}
                     placeholder="0.00"
                     className="w-32 border border-gray-200 rounded-lg px-2 py-1.5 text-right text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-blue-200"
-                    style={{ color: "#49789d" }}
+                    style={{ color: "#a9760a" }}
                   />
                 </div>
               </div>
@@ -511,7 +511,7 @@ export default function QuickSaleForm() {
             type="submit"
             disabled={saving || loading}
             className="inline-flex items-center gap-2 px-6 py-2.5 rounded-lg text-sm font-medium text-white disabled:opacity-60 transition-colors"
-            style={{ backgroundColor: "#49789d" }}
+            style={{ backgroundColor: "#a9760a" }}
           >
             {saving && <Loader2 size={15} className="animate-spin" />}
             Registrar venta

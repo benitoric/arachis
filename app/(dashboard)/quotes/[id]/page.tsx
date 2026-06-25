@@ -125,14 +125,14 @@ function AssociateClientModal({ quote, onClose, onDone }: AssociateModalProps) {
           <button
             onClick={() => setTab("search")}
             className={`flex-1 py-1.5 rounded-lg text-sm font-medium transition-colors ${tab === "search" ? "text-white" : "text-gray-500 hover:bg-gray-50"}`}
-            style={tab === "search" ? { backgroundColor: "#49789d" } : undefined}
+            style={tab === "search" ? { backgroundColor: "#a9760a" } : undefined}
           >
             Buscar existente
           </button>
           <button
             onClick={() => setTab("create")}
             className={`flex-1 py-1.5 rounded-lg text-sm font-medium transition-colors ${tab === "create" ? "text-white" : "text-gray-500 hover:bg-gray-50"}`}
-            style={tab === "create" ? { backgroundColor: "#49789d" } : undefined}
+            style={tab === "create" ? { backgroundColor: "#a9760a" } : undefined}
           >
             Crear nuevo
           </button>
@@ -216,7 +216,7 @@ function AssociateClientModal({ quote, onClose, onDone }: AssociateModalProps) {
               onClick={handleCreate}
               disabled={creating || !newLastName.trim() || !newFirstName.trim() || !newPhone.trim()}
               className="flex-1 inline-flex items-center justify-center gap-2 py-2 rounded-lg text-sm font-medium text-white disabled:opacity-50 transition-colors"
-              style={{ backgroundColor: "#49789d" }}
+              style={{ backgroundColor: "#a9760a" }}
             >
               {creating ? <Loader2 size={14} className="animate-spin" /> : <UserPlus size={14} />}
               Crear y asociar
@@ -395,7 +395,7 @@ export default function QuoteDetailPage() {
           <button
             onClick={() => router.push(`/quotes/${id}/edit`)}
             className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium text-white transition-colors"
-            style={{ backgroundColor: "#49789d" }}
+            style={{ backgroundColor: "#a9760a" }}
           >
             <Pencil size={14} />
             Editar
@@ -426,7 +426,7 @@ export default function QuoteDetailPage() {
               <button
                 onClick={() => router.push(`/clients/${quote.client_id}`)}
                 className="mt-2 text-xs font-medium hover:underline"
-                style={{ color: "#49789d" }}
+                style={{ color: "#a9760a" }}
               >
                 Ver cliente →
               </button>

@@ -559,7 +559,7 @@ export default function QuoteForm({ initialData }: QuoteFormProps) {
                   onClick={handleAddItem}
                   disabled={!selectedProductId}
                   className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-white disabled:opacity-40 transition-colors"
-                  style={{ backgroundColor: "#49789d" }}
+                  style={{ backgroundColor: "#a9760a" }}
                 >
                   <Plus size={15} />
                   Agregar
@@ -800,7 +800,7 @@ export default function QuoteForm({ initialData }: QuoteFormProps) {
             type="submit"
             disabled={saving}
             className="inline-flex items-center gap-2 px-6 py-2.5 rounded-lg text-sm font-medium text-white disabled:opacity-60 transition-colors"
-            style={{ backgroundColor: "#49789d" }}
+            style={{ backgroundColor: "#a9760a" }}
           >
             {saving && <Loader2 size={15} className="animate-spin" />}
             {isEdit ? "Guardar cambios" : "Crear presupuesto"}

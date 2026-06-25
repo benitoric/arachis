@@ -86,7 +86,7 @@ export default function ExpenseCategoriesPage() {
             <button
               onClick={handleAdd}
               disabled={adding || !newName.trim()}
-              className="inline-flex items-center gap-2 bg-chocolate hover:bg-dark-red text-white px-4 py-2.5 rounded-lg font-medium text-sm transition-colors disabled:opacity-50 shadow-sm"
+              className="inline-flex items-center gap-2 bg-brand hover:bg-brand-dark text-ink px-4 py-2.5 rounded-lg font-medium text-sm transition-colors disabled:opacity-50 shadow-sm"
             >
               <Plus size={16} />
               Agregar

@@ -100,7 +100,7 @@ export default function NewClientModal({
       <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto">
         <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100 sticky top-0 bg-white rounded-t-2xl z-10">
           <div className="flex items-center gap-2">
-            <UserPlus size={18} style={{ color: "#49789d" }} />
+            <UserPlus size={18} style={{ color: "#a9760a" }} />
             <h2 className="font-semibold text-gray-900">Nuevo cliente</h2>
           </div>
           <button type="button" onClick={onClose} className="text-gray-400 hover:text-gray-600 transition-colors">
@@ -196,7 +196,7 @@ export default function NewClientModal({
                   className={`flex-1 py-2 rounded-lg border text-xs font-medium capitalize transition-colors ${
                     priceType === t ? "text-white border-transparent" : "border-gray-200 text-gray-600 hover:bg-gray-50"
                   }`}
-                  style={priceType === t ? { backgroundColor: "#49789d" } : undefined}
+                  style={priceType === t ? { backgroundColor: "#a9760a" } : undefined}
                 >
                   {t}
                 </button>
@@ -231,7 +231,7 @@ export default function NewClientModal({
               type="submit"
               disabled={saving}
               className="flex-1 inline-flex items-center justify-center gap-2 py-2.5 rounded-lg text-sm font-medium text-white disabled:opacity-60 transition-colors"
-              style={{ backgroundColor: "#49789d" }}
+              style={{ backgroundColor: "#a9760a" }}
             >
               {saving && <Loader2 size={14} className="animate-spin" />}
               {saving ? "Guardando…" : "Crear cliente"}

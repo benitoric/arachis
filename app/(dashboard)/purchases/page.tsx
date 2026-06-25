@@ -164,7 +164,7 @@ function PurchasesContent() {
         <Link
           href="/purchases/new"
           className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg font-medium text-sm text-white transition-colors shadow-sm"
-          style={{ backgroundColor: "#49789d" }}
+          style={{ backgroundColor: "#a9760a" }}
         >
           <Plus size={16} />
           Nueva compra
@@ -227,7 +227,7 @@ function PurchasesContent() {
       {materialStats && !loading && (
         <div className="bg-white rounded-xl border border-blue-100 shadow-sm p-4 mb-4">
           <div className="flex items-center gap-2 mb-3">
-            <TrendingUp size={15} style={{ color: "#49789d" }} />
+            <TrendingUp size={15} style={{ color: "#a9760a" }} />
             <h3 className="text-sm font-semibold text-gray-900">
               Estadísticas: {materialStats.name}
             </h3>

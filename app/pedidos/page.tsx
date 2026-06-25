@@ -183,7 +183,7 @@ export default function PortalPage() {
   }
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: "#f0f6fb" }}>
+    <div className="min-h-screen" style={{ backgroundColor: "#f6f5f1" }}>
       {/* Lightbox */}
       {lightbox && (
         <div
@@ -276,7 +276,7 @@ export default function PortalPage() {
                     className={`w-6 h-6 rounded-full text-xs font-bold flex items-center justify-center ${
                       step >= n ? "text-white" : "bg-gray-100 text-gray-400"
                     }`}
-                    style={step >= n ? { backgroundColor: "#49789d" } : undefined}
+                    style={step >= n ? { backgroundColor: "#a9760a" } : undefined}
                   >
                     {n}
                   </span>
@@ -361,7 +361,7 @@ export default function PortalPage() {
 
                         <div className="flex-1 min-w-0">
                           <p className="font-medium text-gray-900">{p.name}</p>
-                          <p className="text-sm font-semibold mt-0.5" style={{ color: "#49789d" }}>
+                          <p className="text-sm font-semibold mt-0.5" style={{ color: "#a9760a" }}>
                             {fmt(p.price_minorista)} / u.
                           </p>
                           {qty > 0 && (
@@ -402,7 +402,7 @@ export default function PortalPage() {
                     <button
                       onClick={() => setStep(2)}
                       className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-white transition-colors"
-                      style={{ backgroundColor: "#49789d" }}
+                      style={{ backgroundColor: "#a9760a" }}
                     >
                       Continuar <ArrowRight size={16} />
                     </button>
@@ -431,7 +431,7 @@ export default function PortalPage() {
                 ))}
                 <div className="flex justify-between text-sm font-bold border-t border-blue-100 pt-2 mt-2">
                   <span className="text-gray-800">Total</span>
-                  <span style={{ color: "#49789d" }}>{fmt(total)}</span>
+                  <span style={{ color: "#a9760a" }}>{fmt(total)}</span>
                 </div>
               </div>
 
@@ -572,7 +572,7 @@ export default function PortalPage() {
                             ? "text-white border-transparent"
                             : "border-gray-200 text-gray-600 hover:bg-gray-50"
                         }`}
-                        style={paymentMethod === m ? { backgroundColor: "#49789d" } : undefined}
+                        style={paymentMethod === m ? { backgroundColor: "#a9760a" } : undefined}
                       >
                         {m}
                       </button>
@@ -594,7 +594,7 @@ export default function PortalPage() {
                             ? "text-white border-transparent"
                             : "border-gray-200 text-gray-600 hover:bg-gray-50"
                         }`}
-                        style={deliveryMethod === m ? { backgroundColor: "#49789d" } : undefined}
+                        style={deliveryMethod === m ? { backgroundColor: "#a9760a" } : undefined}
                       >
                         {m === "retiro" ? "Retiro en local" : "Cadetería"}
                       </button>
@@ -634,7 +634,7 @@ export default function PortalPage() {
                   onClick={handleNext}
                   disabled={submitting}
                   className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold text-white disabled:opacity-60 transition-colors"
-                  style={{ backgroundColor: "#49789d" }}
+                  style={{ backgroundColor: "#a9760a" }}
                 >
                   {submitting ? <Loader2 size={16} className="animate-spin" /> : null}
                   {submitting ? "Enviando…" : "Confirmar pedido"}
@@ -711,7 +711,7 @@ export default function PortalPage() {
                     ))}
                     <div className="flex justify-between text-sm font-bold pt-2 border-t border-gray-100 mt-1">
                       <span>Total</span>
-                      <span style={{ color: "#49789d" }}>{fmt(total)}</span>
+                      <span style={{ color: "#a9760a" }}>{fmt(total)}</span>
                     </div>
                   </div>
                   {notes && (

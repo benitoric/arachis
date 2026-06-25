@@ -388,7 +388,7 @@ export default function OrderForm({ initialData }: OrderFormProps) {
                       className={`px-3 py-1.5 rounded-lg text-xs font-medium border transition-colors capitalize ${
                         priceType === t ? "text-white border-transparent" : "text-gray-600 border-gray-200 hover:bg-gray-50"
                       }`}
-                      style={priceType === t ? { backgroundColor: "#49789d" } : undefined}
+                      style={priceType === t ? { backgroundColor: "#a9760a" } : undefined}
                     >
                       {t}
                     </button>
@@ -556,7 +556,7 @@ export default function OrderForm({ initialData }: OrderFormProps) {
                   onClick={handleAddItem}
                   disabled={!selProductId}
                   className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-white disabled:opacity-40 transition-colors"
-                  style={{ backgroundColor: "#49789d" }}
+                  style={{ backgroundColor: "#a9760a" }}
                 >
                   <Plus size={15} /> Agregar
                 </button>
@@ -620,7 +620,7 @@ export default function OrderForm({ initialData }: OrderFormProps) {
                     <td colSpan={3} className="px-4 py-3 text-right font-semibold text-gray-700 text-sm">
                       Total del pedido
                     </td>
-                    <td className="px-3 py-3 text-right font-bold text-gray-900" style={{ color: "#49789d" }}>
+                    <td className="px-3 py-3 text-right font-bold text-gray-900" style={{ color: "#a9760a" }}>
                       {fmt(total)}
                     </td>
                     <td />
@@ -651,7 +651,7 @@ export default function OrderForm({ initialData }: OrderFormProps) {
             type="submit"
             disabled={saving}
             className="inline-flex items-center gap-2 px-6 py-2.5 rounded-lg text-sm font-medium text-white disabled:opacity-60 transition-colors"
-            style={{ backgroundColor: "#49789d" }}
+            style={{ backgroundColor: "#a9760a" }}
           >
             {saving && <Loader2 size={15} className="animate-spin" />}
             {isEdit ? "Guardar cambios" : "Crear pedido"}

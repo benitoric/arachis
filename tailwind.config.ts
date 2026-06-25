@@ -1,6 +1,8 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  // Dark mode controlled by a `.dark` class on <html> (toggle + localStorage)
+  darkMode: "class",
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -9,44 +11,77 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Primary blue — used for buttons, links, primary actions throughout the app
+        // ── Neutrals routed through CSS variables ──────────────────────────
+        // The whole gray ramp + white/black resolve to variables that flip in
+        // dark mode (see globals.css). This makes the hundreds of existing
+        // bg-white / text-gray-* / border-gray-* utilities adapt automatically.
+        white: "var(--c-white)",
+        black: "var(--c-black)",
+        gray: {
+          50: "var(--c-gray-50)",
+          100: "var(--c-gray-100)",
+          200: "var(--c-gray-200)",
+          300: "var(--c-gray-300)",
+          400: "var(--c-gray-400)",
+          500: "var(--c-gray-500)",
+          600: "var(--c-gray-600)",
+          700: "var(--c-gray-700)",
+          800: "var(--c-gray-800)",
+          900: "var(--c-gray-900)",
+          950: "var(--c-gray-950)",
+        },
+
+        // ── Brand ──────────────────────────────────────────────────────────
+        // Bright amber from the logo. Used as a FILL (buttons, active states,
+        // badges) and always paired with dark `ink` text for contrast.
+        brand: {
+          light: "#F7CE6B",
+          DEFAULT: "#F0B838",
+          dark: "#D29A1E",
+        },
+        // Near-black from the logo — text that sits on amber, and dark chrome.
+        ink: {
+          DEFAULT: "#1B1C20",
+          soft: "#3A3C44",
+        },
+
+        // ── Semantic accent (legacy token names kept to avoid mass edits) ───
+        // Used as foreground (text/icons/rings) on light surfaces, so it is a
+        // deep, legible amber in light mode and bright amber in dark mode.
         chocolate: {
-          DEFAULT: "#49789d",
-          dark: "#3a6890",
-          light: "#6a9cbd",
+          DEFAULT: "var(--accent)",
+          dark: "var(--accent-strong)",
+          light: "var(--accent-soft)",
         },
-        // Darker blue — used for button hover states (bg-chocolate hover:bg-dark-red)
-        "dark-red": "#3a6890",
-        // Accent blue — focus rings, icons, highlights (same family as chocolate)
+        "dark-red": "var(--accent-strong)",
         gold: {
-          DEFAULT: "#49789d",
-          light: "#6a9cbd",
-          dark: "#3a6890",
+          DEFAULT: "var(--accent)",
+          light: "var(--accent-soft)",
+          dark: "var(--accent-strong)",
         },
-        // Light blue tint — soft backgrounds, empty states, badges
+        // Soft amber wash for badges / empty states / soft headers.
         cream: {
-          DEFAULT: "#daeaf5",
-          light: "#eef5fb",
-          dark: "#c5d9ea",
+          DEFAULT: "var(--soft)",
+          light: "var(--soft)",
+          dark: "var(--soft-strong)",
         },
-        // Dark navy — sidebar background and dark surfaces
+        // Charcoal surfaces (sidebar, login gradient). Dark in both modes.
         navy: {
-          DEFAULT: "#1e3a52",
-          dark: "#16293d",
-          medium: "#2d5070",
+          DEFAULT: "var(--charcoal)",
+          dark: "var(--charcoal-deep)",
+          medium: "var(--charcoal-2)",
         },
-        // Coral red — secondary accent for destructive actions and alerts
         coral: {
-          DEFAULT: "#E8475F",
-          dark: "#c0344a",
+          DEFAULT: "var(--danger)",
+          dark: "var(--danger-strong)",
         },
         app: {
-          bg: "#f0f6fb",
-          sidebar: "#1e3a52",
-          "sidebar-hover": "#2d5070",
-          "sidebar-active": "#49789d",
-          accent: "#49789d",
-          "accent-hover": "#3a6890",
+          bg: "var(--app-bg)",
+          sidebar: "var(--charcoal)",
+          "sidebar-hover": "var(--charcoal-2)",
+          "sidebar-active": "#F0B838",
+          accent: "var(--accent)",
+          "accent-hover": "var(--accent-strong)",
         },
       },
       fontFamily: {

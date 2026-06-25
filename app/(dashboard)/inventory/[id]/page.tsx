@@ -350,7 +350,7 @@ export default function InventoryCountPage() {
               onClick={handleFinalize}
               disabled={finalizing || saving}
               className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-medium text-white transition-colors disabled:opacity-60"
-              style={{ backgroundColor: "#49789d" }}
+              style={{ backgroundColor: "#a9760a" }}
             >
               {finalizing ? <Loader2 size={14} className="animate-spin" /> : <CheckCircle size={14} />}
               Finalizar conteo

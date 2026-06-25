@@ -73,7 +73,7 @@ export default function NewProductModal({ onClose, onCreated }: Props) {
       <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-sm">
         <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100">
           <div className="flex items-center gap-2">
-            <Package size={18} style={{ color: "#49789d" }} />
+            <Package size={18} style={{ color: "#a9760a" }} />
             <h2 className="font-semibold text-gray-900">Nuevo artículo</h2>
           </div>
           <button type="button" onClick={onClose} className="text-gray-400 hover:text-gray-600 transition-colors">
@@ -134,7 +134,7 @@ export default function NewProductModal({ onClose, onCreated }: Props) {
               disabled={saving}
               onClick={handleCrear}
               className="flex-1 inline-flex items-center justify-center gap-2 py-2.5 rounded-lg text-sm font-medium text-white disabled:opacity-60 transition-colors"
-              style={{ backgroundColor: "#49789d" }}
+              style={{ backgroundColor: "#a9760a" }}
             >
               {saving && <Loader2 size={14} className="animate-spin" />}
               {saving ? "Guardando…" : "Crear artículo"}

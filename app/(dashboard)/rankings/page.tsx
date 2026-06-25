@@ -23,10 +23,10 @@ const fmtShort = (n: number) => {
 
 const MONTHS_ES = ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"];
 
-const COLORS = ["#49789d", "#E8475F", "#e8a95a", "#63a0c5", "#2d5070", "#a78bfa", "#34d399", "#f97316", "#94a3b8", "#e879f9"];
+const COLORS = ["#a9760a", "#E8475F", "#e8a95a", "#c99a3a", "#26282e", "#a78bfa", "#34d399", "#f97316", "#94a3b8", "#e879f9"];
 const CANAL_COLORS: Record<string, string> = {
-  minorista: "#49789d",
-  mayorista: "#2d5070",
+  minorista: "#a9760a",
+  mayorista: "#26282e",
   portal: "#E8475F",
   otra: "#e8a95a",
 };
@@ -263,7 +263,7 @@ export default function RankingsPage() {
                         <XAxis type="number" tickFormatter={fmtShort} tick={{ fontSize: 10, fill: "#9ca3af" }} axisLine={false} tickLine={false} />
                         <YAxis type="category" dataKey="name" width={110} tick={{ fontSize: 11, fill: "#374151" }} axisLine={false} tickLine={false} />
                         <Tooltip formatter={(v) => [fmt(v as number), "Ventas"]} contentStyle={{ borderRadius: "8px", fontSize: "12px" }} />
-                        <Bar dataKey="revenue" fill="#49789d" radius={[0, 4, 4, 0]} />
+                        <Bar dataKey="revenue" fill="#a9760a" radius={[0, 4, 4, 0]} />
                       </BarChart>
                     </ResponsiveContainer>
                   )}
@@ -344,7 +344,7 @@ export default function RankingsPage() {
                         <XAxis type="number" tickFormatter={fmtShort} tick={{ fontSize: 10, fill: "#9ca3af" }} axisLine={false} tickLine={false} />
                         <YAxis type="category" dataKey="name" width={120} tick={{ fontSize: 11, fill: "#374151" }} axisLine={false} tickLine={false} />
                         <Tooltip formatter={(v) => [fmt(v as number), "Ventas"]} contentStyle={{ borderRadius: "8px", fontSize: "12px" }} />
-                        <Bar dataKey="revenue" fill="#49789d" radius={[0, 4, 4, 0]} />
+                        <Bar dataKey="revenue" fill="#a9760a" radius={[0, 4, 4, 0]} />
                       </BarChart>
                     </ResponsiveContainer>
                   )}
@@ -504,7 +504,7 @@ export default function RankingsPage() {
                         contentStyle={{ borderRadius: "8px", fontSize: "12px" }}
                       />
                       <Legend formatter={(v) => <span style={{ fontSize: 12 }}>{v === "revenue" ? "Ventas ($)" : "Unidades"}</span>} />
-                      <Line yAxisId="left" type="monotone" dataKey="revenue" stroke="#49789d" strokeWidth={2} dot={{ r: 3 }} activeDot={{ r: 5 }} name="revenue" />
+                      <Line yAxisId="left" type="monotone" dataKey="revenue" stroke="#a9760a" strokeWidth={2} dot={{ r: 3 }} activeDot={{ r: 5 }} name="revenue" />
                       <Line yAxisId="right" type="monotone" dataKey="units" stroke="#E8475F" strokeWidth={2} dot={{ r: 3 }} activeDot={{ r: 5 }} strokeDasharray="4 2" name="units" />
                     </LineChart>
                   </ResponsiveContainer>

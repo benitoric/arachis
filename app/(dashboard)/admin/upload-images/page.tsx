@@ -122,7 +122,7 @@ export default function UploadImagesPage() {
           onClick={uploadAll}
           disabled={running}
           className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium text-white transition-colors disabled:opacity-60"
-          style={{ backgroundColor: "#49789d" }}
+          style={{ backgroundColor: "#a9760a" }}
         >
           {running ? <Loader2 size={15} className="animate-spin" /> : <Upload size={15} />}
           {running ? "Subiendo…" : "Subir todas las imágenes"}

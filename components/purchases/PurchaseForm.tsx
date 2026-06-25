@@ -446,7 +446,7 @@ export default function PurchaseForm({ mode, initialData }: Props) {
             <button
               type="submit"
               disabled={loading}
-              className="px-5 py-2.5 rounded-lg bg-chocolate hover:bg-dark-red text-white text-sm font-medium transition-colors disabled:opacity-50 shadow-sm"
+              className="px-5 py-2.5 rounded-lg bg-brand hover:bg-brand-dark text-ink text-sm font-medium transition-colors disabled:opacity-50 shadow-sm"
             >
               {loading ? "Guardando..." : "Guardar cambios"}
             </button>
@@ -542,7 +542,7 @@ export default function PurchaseForm({ mode, initialData }: Props) {
               type="button"
               onClick={addItem}
               className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium text-white transition-colors"
-              style={{ backgroundColor: "#49789d" }}
+              style={{ backgroundColor: "#a9760a" }}
             >
               <Plus size={14} />
               Agregar ítem
@@ -709,7 +709,7 @@ export default function PurchaseForm({ mode, initialData }: Props) {
               <span className="font-semibold text-gray-700">Total compra:</span>
               <span
                 className="font-bold text-lg"
-                style={{ color: "#49789d" }}
+                style={{ color: "#a9760a" }}
               >
                 {fmtNum(grandTotal)}
               </span>
@@ -735,7 +735,7 @@ export default function PurchaseForm({ mode, initialData }: Props) {
             type="submit"
             disabled={loading}
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium text-white disabled:opacity-50 transition-colors shadow-sm"
-            style={{ backgroundColor: "#49789d" }}
+            style={{ backgroundColor: "#a9760a" }}
           >
             {loading && <Loader2 size={14} className="animate-spin" />}
             {loading ? "Guardando…" : "Registrar compra"}

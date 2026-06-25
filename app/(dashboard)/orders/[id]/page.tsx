@@ -176,7 +176,7 @@ function AssociateClientModal({
       <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-md max-h-[90vh] overflow-y-auto">
         <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100 sticky top-0 bg-white z-10">
           <div className="flex items-center gap-2">
-            <UserPlus size={18} style={{ color: "#49789d" }} />
+            <UserPlus size={18} style={{ color: "#a9760a" }} />
             <h2 className="font-semibold text-gray-900">Asociar cliente</h2>
           </div>
           <button onClick={onClose} className="text-gray-400 hover:text-gray-600 transition-colors"><X size={20} /></button>
@@ -233,7 +233,7 @@ function AssociateClientModal({
               onClick={() => selectedId && handleConfirm(selectedId)}
               disabled={!selectedId || saving}
               className="flex-1 py-2.5 rounded-lg text-sm font-medium text-white disabled:opacity-40 transition-colors"
-              style={{ backgroundColor: "#49789d" }}
+              style={{ backgroundColor: "#a9760a" }}
             >
               {saving ? <Loader2 size={14} className="animate-spin inline" /> : "Confirmar con este cliente"}
             </button>
@@ -408,7 +408,7 @@ function AddPaymentModal({
       <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-sm overflow-y-auto max-h-[90vh]">
         <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100">
           <div className="flex items-center gap-2">
-            <DollarSign size={18} style={{ color: "#49789d" }} />
+            <DollarSign size={18} style={{ color: "#a9760a" }} />
             <h2 className="font-semibold text-gray-900">Registrar cobro</h2>
           </div>
           <button onClick={onClose} className="text-gray-400 hover:text-gray-600 transition-colors"><X size={20} /></button>
@@ -512,7 +512,7 @@ function AddPaymentModal({
               )}
               <div className="flex justify-between font-semibold border-t border-gray-100 pt-1 text-gray-800">
                 <span>A cobrar</span>
-                <span style={{ color: "#49789d" }}>{fmt(Math.max(0, balance - discountAmt))}</span>
+                <span style={{ color: "#a9760a" }}>{fmt(Math.max(0, balance - discountAmt))}</span>
               </div>
             </div>
           </div>
@@ -531,7 +531,7 @@ function AddPaymentModal({
                   className={`flex-1 py-2 rounded-lg border text-xs font-medium capitalize transition-colors ${
                     method === m ? "text-white border-transparent" : "border-gray-200 text-gray-600 hover:bg-gray-50"
                   }`}
-                  style={method === m ? { backgroundColor: "#49789d" } : undefined}
+                  style={method === m ? { backgroundColor: "#a9760a" } : undefined}
                 >
                   {m}
                 </button>
@@ -560,7 +560,7 @@ function AddPaymentModal({
               type="submit"
               disabled={saving}
               className="flex-1 inline-flex items-center justify-center gap-2 py-2.5 rounded-lg text-sm font-medium text-white disabled:opacity-60 transition-colors"
-              style={{ backgroundColor: "#49789d" }}
+              style={{ backgroundColor: "#a9760a" }}
             >
               {saving && <Loader2 size={14} className="animate-spin" />}
               {saving ? "Guardando…" : "Registrar"}
@@ -958,7 +958,7 @@ export default function OrderDetailPage() {
               onClick={handleConfirm}
               disabled={actionLoading}
               className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-medium text-white transition-colors disabled:opacity-60"
-              style={{ backgroundColor: "#49789d" }}
+              style={{ backgroundColor: "#a9760a" }}
             >
               {actionLoading ? <Loader2 size={14} className="animate-spin" /> : <ChevronRight size={14} />}
               Confirmar pedido
@@ -1019,7 +1019,7 @@ export default function OrderDetailPage() {
                     className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium ${
                       active ? "text-white" : done ? "bg-green-50 text-green-600" : "bg-gray-50 text-gray-400"
                     }`}
-                    style={active ? { backgroundColor: "#49789d" } : undefined}
+                    style={active ? { backgroundColor: "#a9760a" } : undefined}
                   >
                     {done && <CheckCircle size={11} />}
                     {STATUS_LABEL[s]}
@@ -1143,7 +1143,7 @@ export default function OrderDetailPage() {
           <div className="px-5 py-3 border-t border-gray-100 bg-gray-50/30">
             <div className="flex justify-end gap-8 text-sm font-bold text-gray-900">
               <span>Total</span>
-              <span style={{ color: "#49789d" }}>{fmt(total)}</span>
+              <span style={{ color: "#a9760a" }}>{fmt(total)}</span>
             </div>
           </div>
         </div>
@@ -1156,7 +1156,7 @@ export default function OrderDetailPage() {
               <button
                 onClick={() => setShowPaymentModal(true)}
                 className="inline-flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-lg text-white transition-colors"
-                style={{ backgroundColor: "#49789d" }}
+                style={{ backgroundColor: "#a9760a" }}
               >
                 <Plus size={12} /> Registrar cobro
               </button>

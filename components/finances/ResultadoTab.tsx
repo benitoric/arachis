@@ -722,7 +722,7 @@ export default function ResultadoTab() {
   const grossRef = pl?.grossRevenue ?? 0;
 
   const SERIES = [
-    { key: "netRevenue", label: "Ing. netos", color: "#49789d" },
+    { key: "netRevenue", label: "Ing. netos", color: "#a9760a" },
     { key: "cmv", label: "CMV", color: "#e8475f" },
     { key: "contribution", label: "Contrib. marginal", color: "#22c55e" },
     { key: "indirect", label: "Gastos ind.", color: "#f59e0b" },
@@ -749,14 +749,14 @@ export default function ResultadoTab() {
           <button
             onClick={() => setCurrency("ARS")}
             className={`px-4 py-2 transition-colors ${currency === "ARS" ? "text-white" : "text-gray-500 hover:bg-gray-50"}`}
-            style={currency === "ARS" ? { backgroundColor: "#49789d" } : undefined}
+            style={currency === "ARS" ? { backgroundColor: "#a9760a" } : undefined}
           >
             ARS
           </button>
           <button
             onClick={() => { setCurrency("USD"); if (!hasRates) fetchCurrentRate(); }}
             className={`px-4 py-2 transition-colors ${currency === "USD" ? "text-white" : "text-gray-500 hover:bg-gray-50"}`}
-            style={currency === "USD" ? { backgroundColor: "#49789d" } : undefined}
+            style={currency === "USD" ? { backgroundColor: "#a9760a" } : undefined}
           >
             USD
           </button>
@@ -825,7 +825,7 @@ export default function ResultadoTab() {
               onClick={saveManualRate}
               disabled={savingManual || !manualRate || parseFloat(manualRate) <= 0}
               className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-medium text-white disabled:opacity-50"
-              style={{ backgroundColor: "#49789d" }}
+              style={{ backgroundColor: "#a9760a" }}
             >
               {savingManual ? <Loader2 size={13} className="animate-spin" /> : null}
               Guardar TC
@@ -853,7 +853,7 @@ export default function ResultadoTab() {
           {/* P&L Card */}
           <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-5 mb-5">
             <div className="flex items-center gap-2 mb-4">
-              <TrendingUp size={16} style={{ color: "#49789d" }} />
+              <TrendingUp size={16} style={{ color: "#a9760a" }} />
               <h3 className="font-semibold text-gray-900">Estado de Resultados</h3>
               {currency === "USD" && (
                 <span className="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full font-medium">USD</span>
@@ -1204,7 +1204,7 @@ export default function ResultadoTab() {
           <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-5">
             <div className="flex items-center justify-between mb-4">
               <h3 className="font-semibold text-gray-900 flex items-center gap-2">
-                <TrendingUp size={15} style={{ color: "#49789d" }} />
+                <TrendingUp size={15} style={{ color: "#a9760a" }} />
                 Evolución — últimos 12 meses
                 {currency === "USD" && (
                   <span className="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full font-medium">USD</span>

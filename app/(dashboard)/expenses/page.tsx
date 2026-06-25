@@ -87,7 +87,7 @@ function RubrosTab() {
           <button
             onClick={handleAdd}
             disabled={adding || !newName.trim()}
-            className="inline-flex items-center gap-2 bg-chocolate hover:bg-dark-red text-white px-4 py-2.5 rounded-lg font-medium text-sm transition-colors disabled:opacity-50 shadow-sm"
+            className="inline-flex items-center gap-2 bg-brand hover:bg-brand-dark text-ink px-4 py-2.5 rounded-lg font-medium text-sm transition-colors disabled:opacity-50 shadow-sm"
           >
             <Plus size={16} />
             Agregar
@@ -218,7 +218,7 @@ export default function ExpensesPage() {
         {tab === "gastos" && (
           <Link
             href="/expenses/new"
-            className="inline-flex items-center gap-2 bg-chocolate hover:bg-dark-red text-white px-4 py-2.5 rounded-lg font-medium text-sm transition-colors shadow-sm"
+            className="inline-flex items-center gap-2 bg-brand hover:bg-brand-dark text-ink px-4 py-2.5 rounded-lg font-medium text-sm transition-colors shadow-sm"
           >
             <Plus size={16} />
             Nuevo gasto
@@ -233,7 +233,7 @@ export default function ExpensesPage() {
           className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
             tab === "gastos" ? "text-white shadow-sm" : "text-gray-500 hover:text-gray-700 hover:bg-gray-50"
           }`}
-          style={tab === "gastos" ? { backgroundColor: "#49789d" } : undefined}
+          style={tab === "gastos" ? { backgroundColor: "#a9760a" } : undefined}
         >
           <Receipt size={15} />
           Gastos
@@ -243,7 +243,7 @@ export default function ExpensesPage() {
           className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
             tab === "rubros" ? "text-white shadow-sm" : "text-gray-500 hover:text-gray-700 hover:bg-gray-50"
           }`}
-          style={tab === "rubros" ? { backgroundColor: "#49789d" } : undefined}
+          style={tab === "rubros" ? { backgroundColor: "#a9760a" } : undefined}
         >
           <Tag size={15} />
           Rubros

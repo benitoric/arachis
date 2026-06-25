@@ -184,7 +184,7 @@ export default function ProductionForm({ mode, initialData }: Props) {
           <button
             type="submit"
             disabled={loading}
-            className="px-5 py-2.5 rounded-lg bg-chocolate hover:bg-dark-red text-white text-sm font-medium transition-colors disabled:opacity-50 shadow-sm"
+            className="px-5 py-2.5 rounded-lg bg-brand hover:bg-brand-dark text-ink text-sm font-medium transition-colors disabled:opacity-50 shadow-sm"
           >
             {loading
               ? "Guardando..."

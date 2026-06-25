@@ -164,7 +164,7 @@ export default function NewInventoryPage() {
                 className={`py-3 px-4 rounded-xl border text-sm font-medium transition-colors ${
                   type === opt.value ? "text-white border-transparent" : "border-gray-200 text-gray-600 hover:bg-gray-50"
                 }`}
-                style={type === opt.value ? { backgroundColor: "#49789d" } : undefined}
+                style={type === opt.value ? { backgroundColor: "#a9760a" } : undefined}
               >
                 {opt.label}
               </button>
@@ -199,7 +199,7 @@ export default function NewInventoryPage() {
             type="submit"
             disabled={creating}
             className="flex-1 inline-flex items-center justify-center gap-2 py-2.5 rounded-lg text-sm font-medium text-white disabled:opacity-60 transition-colors"
-            style={{ backgroundColor: "#49789d" }}
+            style={{ backgroundColor: "#a9760a" }}
           >
             {creating && <Loader2 size={14} className="animate-spin" />}
             {creating ? "Generando…" : "Crear toma de inventario"}

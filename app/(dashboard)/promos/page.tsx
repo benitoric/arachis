@@ -57,7 +57,7 @@ const TEMPLATES: Record<TemplateStyle, TemplateDef> = {
   elegante: {
     label: "Elegante",
     description: "Fondo oscuro, estilo premium",
-    bg: "#1e3a50",
+    bg: "#1a1b1f",
     titleColor: "#f5e6c8",
     subtitleColor: "#e8a95a",
     priceColor: "#D4A853",
@@ -71,11 +71,11 @@ const TEMPLATES: Record<TemplateStyle, TemplateDef> = {
     description: "Fondo claro, estilo moderno",
     bg: "#faf7f2",
     titleColor: "#c93050",
-    subtitleColor: "#49789d",
+    subtitleColor: "#a9760a",
     priceColor: "#c93050",
     itemBg: "#ffffff",
     itemBorderLeft: true,
-    footerBg: "#49789d",
+    footerBg: "#a9760a",
     footerText: "#ffffff",
     dividerColor: "#c93050",
     topAccentColor: "#c93050",
@@ -83,7 +83,7 @@ const TEMPLATES: Record<TemplateStyle, TemplateDef> = {
   festivo: {
     label: "Festivo",
     description: "Gradiente vibrante, estilo llamativo",
-    bg: "linear-gradient(145deg, #c93050 0%, #1e3a50 100%)",
+    bg: "linear-gradient(145deg, #c93050 0%, #1a1b1f 100%)",
     titleColor: "#ffffff",
     subtitleColor: "rgba(255,255,255,0.88)",
     priceColor: "#FFE066",
@@ -254,7 +254,7 @@ function PromoPlate({ template, title, subtitle, promoText, items, phone, portal
                 borderRadius: "12px",
                 padding: `${rowPadV}px 24px`,
                 boxSizing: "border-box",
-                ...(tmpl.itemBorderLeft ? { borderLeft: "8px solid #49789d" } : {}),
+                ...(tmpl.itemBorderLeft ? { borderLeft: "8px solid #a9760a" } : {}),
               }}
             >
               {/* Name — never clipped, wraps if needed */}
@@ -842,7 +842,7 @@ export default function PromosPage() {
                 onClick={handleDownloadJPG}
                 disabled={downloading !== null}
                 className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-medium text-white disabled:opacity-50 transition-colors"
-                style={{ backgroundColor: "#49789d" }}
+                style={{ backgroundColor: "#a9760a" }}
               >
                 {downloading === "jpg" ? <Loader2 size={14} className="animate-spin" /> : <FileImage size={14} />}
                 Descargar JPG
@@ -1006,7 +1006,7 @@ export default function PromosPage() {
                 onClick={handleSaveSettings}
                 disabled={savingSettings}
                 className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-medium text-white disabled:opacity-50 transition-colors"
-                style={{ backgroundColor: "#49789d" }}
+                style={{ backgroundColor: "#a9760a" }}
               >
                 {savingSettings ? <Loader2 size={14} className="animate-spin" /> : <Save size={14} />}
                 Guardar ajustes

@@ -65,7 +65,7 @@ export default function InventoryPage() {
         <button
           onClick={() => router.push("/inventory/new")}
           className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-medium text-white transition-colors"
-          style={{ backgroundColor: "#49789d" }}
+          style={{ backgroundColor: "#a9760a" }}
         >
           <Plus size={15} /> Nueva toma de inventario
         </button>
@@ -83,7 +83,7 @@ export default function InventoryPage() {
             <button
               onClick={() => router.push("/inventory/new")}
               className="mt-3 text-sm font-medium hover:underline"
-              style={{ color: "#49789d" }}
+              style={{ color: "#a9760a" }}
             >
               Crear la primera
             </button>
