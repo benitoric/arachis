@@ -183,7 +183,8 @@ export default function PortalPage() {
   }
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: "#f6f5f1" }}>
+    <div className="dark fixed inset-0 overflow-y-auto bg-app-bg">
+      {/* Portal público: contenedor fijo a pantalla completa, siempre oscuro */}
       {/* Lightbox */}
       {lightbox && (
         <div
@@ -192,7 +193,7 @@ export default function PortalPage() {
           onClick={() => setLightbox(null)}
         >
           <button
-            className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors z-10"
+            className="absolute top-4 right-4 text-snow/70 hover:text-snow transition-colors z-10"
             onClick={() => setLightbox(null)}
           >
             <X size={28} />
@@ -201,7 +202,7 @@ export default function PortalPage() {
           {/* Prev */}
           {lightbox.images.length > 1 && lightbox.index > 0 && (
             <button
-              className="absolute left-4 text-white/80 hover:text-white transition-colors z-10 w-10 h-10 flex items-center justify-center rounded-full bg-black/30 hover:bg-black/50"
+              className="absolute left-4 text-snow/80 hover:text-snow transition-colors z-10 w-10 h-10 flex items-center justify-center rounded-full bg-snow/10 hover:bg-snow/20"
               onClick={(e) => { e.stopPropagation(); setLightbox((lb) => lb && { ...lb, index: lb.index - 1 }); }}
             >
               <ArrowLeft size={22} />
@@ -221,7 +222,7 @@ export default function PortalPage() {
           {/* Next */}
           {lightbox.images.length > 1 && lightbox.index < lightbox.images.length - 1 && (
             <button
-              className="absolute right-4 text-white/80 hover:text-white transition-colors z-10 w-10 h-10 flex items-center justify-center rounded-full bg-black/30 hover:bg-black/50"
+              className="absolute right-4 text-snow/80 hover:text-snow transition-colors z-10 w-10 h-10 flex items-center justify-center rounded-full bg-snow/10 hover:bg-snow/20"
               onClick={(e) => { e.stopPropagation(); setLightbox((lb) => lb && { ...lb, index: lb.index + 1 }); }}
             >
               <ArrowRight size={22} />
@@ -235,7 +236,7 @@ export default function PortalPage() {
                 <button
                   key={i}
                   onClick={() => setLightbox((lb) => lb && { ...lb, index: i })}
-                  className={`w-2 h-2 rounded-full transition-all ${i === lightbox.index ? "bg-white scale-125" : "bg-white/40"}`}
+                  className={`w-2 h-2 rounded-full transition-all ${i === lightbox.index ? "bg-snow scale-125" : "bg-snow/40"}`}
                 />
               ))}
             </div>
@@ -274,9 +275,9 @@ export default function PortalPage() {
                 <div className="flex items-center gap-2">
                   <span
                     className={`w-6 h-6 rounded-full text-xs font-bold flex items-center justify-center ${
-                      step >= n ? "text-white" : "bg-gray-100 text-gray-400"
+                      step >= n ? "text-ink" : "bg-gray-100 text-gray-400"
                     }`}
-                    style={step >= n ? { backgroundColor: "#a9760a" } : undefined}
+                    style={step >= n ? { backgroundColor: "#F0B838" } : undefined}
                   >
                     {n}
                   </span>
@@ -329,7 +330,7 @@ export default function PortalPage() {
                       <div
                         key={p.id}
                         className={`flex items-center p-4 rounded-xl border transition-colors gap-3 ${
-                          qty > 0 ? "border-blue-200 bg-blue-50/40" : "border-gray-100 bg-white"
+                          qty > 0 ? "border-brand/50 bg-brand/10" : "border-gray-100 bg-white"
                         }`}
                       >
                         {/* Thumbnail */}
@@ -347,7 +348,7 @@ export default function PortalPage() {
                               {/* eslint-disable-next-line @next/next/no-img-element */}
                               <img src={p.images[0]} alt={p.name} className="w-full h-full object-cover" />
                               {p.images.length > 1 && (
-                                <span className="absolute bottom-1 right-1 bg-black/60 text-white text-[10px] px-1 rounded leading-4">
+                                <span className="absolute bottom-1 right-1 bg-ink/70 text-snow text-[10px] px-1 rounded leading-4">
                                   {p.images.length}
                                 </span>
                               )}
@@ -361,7 +362,7 @@ export default function PortalPage() {
 
                         <div className="flex-1 min-w-0">
                           <p className="font-medium text-gray-900">{p.name}</p>
-                          <p className="text-sm font-semibold mt-0.5" style={{ color: "#a9760a" }}>
+                          <p className="text-sm font-semibold mt-0.5" style={{ color: "#F0B838" }}>
                             {fmt(p.price_minorista)} / u.
                           </p>
                           {qty > 0 && (
@@ -401,8 +402,8 @@ export default function PortalPage() {
                     </div>
                     <button
                       onClick={() => setStep(2)}
-                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-white transition-colors"
-                      style={{ backgroundColor: "#a9760a" }}
+                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-ink transition-colors"
+                      style={{ backgroundColor: "#F0B838" }}
                     >
                       Continuar <ArrowRight size={16} />
                     </button>
@@ -421,7 +422,7 @@ export default function PortalPage() {
               </div>
 
               {/* Order summary */}
-              <div className="bg-blue-50/50 rounded-xl border border-blue-100 p-4">
+              <div className="bg-brand/10 rounded-xl border border-brand/20 p-4">
                 <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Resumen de tu pedido</p>
                 {cartEntries.map((it) => (
                   <div key={it.product_id} className="flex justify-between text-sm py-1">
@@ -429,9 +430,9 @@ export default function PortalPage() {
                     <span className="font-medium text-gray-900">{fmt(it.quantity * it.unit_price)}</span>
                   </div>
                 ))}
-                <div className="flex justify-between text-sm font-bold border-t border-blue-100 pt-2 mt-2">
+                <div className="flex justify-between text-sm font-bold border-t border-brand/20 pt-2 mt-2">
                   <span className="text-gray-800">Total</span>
-                  <span style={{ color: "#a9760a" }}>{fmt(total)}</span>
+                  <span style={{ color: "#F0B838" }}>{fmt(total)}</span>
                 </div>
               </div>
 
@@ -446,7 +447,7 @@ export default function PortalPage() {
                       value={guestFirstName}
                       onChange={(e) => setGuestFirstName(e.target.value)}
                       placeholder="Ej: María"
-                      className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-200"
+                      className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand/40"
                     />
                   </div>
                   <div>
@@ -458,7 +459,7 @@ export default function PortalPage() {
                       value={guestLastName}
                       onChange={(e) => setGuestLastName(e.target.value)}
                       placeholder="Ej: García"
-                      className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-200"
+                      className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand/40"
                     />
                   </div>
                 </div>
@@ -478,7 +479,7 @@ export default function PortalPage() {
                         aria-invalid={phoneDigits > 0 && !phoneComplete}
                         className={`w-full border rounded-xl px-4 py-3 pr-10 text-sm focus:outline-none focus:ring-2 ${
                           phoneDigits === 0
-                            ? "border-gray-200 focus:ring-blue-200"
+                            ? "border-gray-200 focus:ring-brand/40"
                             : phoneComplete
                               ? "border-green-300 focus:ring-green-200"
                               : "border-red-300 focus:ring-red-200"
@@ -515,7 +516,7 @@ export default function PortalPage() {
                           setGuestCity("");
                         }
                       }}
-                      className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-200 bg-white"
+                      className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand/40 bg-white"
                     >
                       <option value="">Seleccioná una ciudad</option>
                       <option value="San Miguel de Tucumán">San Miguel de Tucumán</option>
@@ -528,7 +529,7 @@ export default function PortalPage() {
                         value={guestCity}
                         onChange={(e) => setGuestCity(e.target.value)}
                         placeholder="Ingresá tu ciudad"
-                        className="mt-2 w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-200"
+                        className="mt-2 w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand/40"
                       />
                     )}
                   </div>
@@ -542,7 +543,7 @@ export default function PortalPage() {
                     value={guestEmail}
                     onChange={(e) => setGuestEmail(e.target.value)}
                     placeholder="tu@email.com"
-                    className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-200"
+                    className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand/40"
                   />
                 </div>
                 <div>
@@ -554,7 +555,7 @@ export default function PortalPage() {
                     value={desiredDate}
                     onChange={(e) => setDesiredDate(e.target.value)}
                     min={today}
-                    className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-200"
+                    className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand/40"
                   />
                 </div>
                 <div>
@@ -569,10 +570,10 @@ export default function PortalPage() {
                         onClick={() => setPaymentMethod(m)}
                         className={`py-3 rounded-xl border text-sm font-medium capitalize transition-colors ${
                           paymentMethod === m
-                            ? "text-white border-transparent"
+                            ? "text-ink border-transparent"
                             : "border-gray-200 text-gray-600 hover:bg-gray-50"
                         }`}
-                        style={paymentMethod === m ? { backgroundColor: "#a9760a" } : undefined}
+                        style={paymentMethod === m ? { backgroundColor: "#F0B838" } : undefined}
                       >
                         {m}
                       </button>
@@ -591,10 +592,10 @@ export default function PortalPage() {
                         onClick={() => setDeliveryMethod(m)}
                         className={`py-3 rounded-xl border text-sm font-medium capitalize transition-colors ${
                           deliveryMethod === m
-                            ? "text-white border-transparent"
+                            ? "text-ink border-transparent"
                             : "border-gray-200 text-gray-600 hover:bg-gray-50"
                         }`}
-                        style={deliveryMethod === m ? { backgroundColor: "#a9760a" } : undefined}
+                        style={deliveryMethod === m ? { backgroundColor: "#F0B838" } : undefined}
                       >
                         {m === "retiro" ? "Retiro en local" : "Cadetería"}
                       </button>
@@ -610,7 +611,7 @@ export default function PortalPage() {
                     onChange={(e) => setNotes(e.target.value)}
                     rows={3}
                     placeholder="Dedicatoria, sabores preferidos, indicaciones de entrega…"
-                    className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-200 resize-none"
+                    className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand/40 resize-none"
                   />
                 </div>
               </div>
@@ -633,8 +634,8 @@ export default function PortalPage() {
                   type="button"
                   onClick={handleNext}
                   disabled={submitting}
-                  className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold text-white disabled:opacity-60 transition-colors"
-                  style={{ backgroundColor: "#a9760a" }}
+                  className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold text-ink disabled:opacity-60 transition-colors"
+                  style={{ backgroundColor: "#F0B838" }}
                 >
                   {submitting ? <Loader2 size={16} className="animate-spin" /> : null}
                   {submitting ? "Enviando…" : "Confirmar pedido"}
@@ -711,7 +712,7 @@ export default function PortalPage() {
                     ))}
                     <div className="flex justify-between text-sm font-bold pt-2 border-t border-gray-100 mt-1">
                       <span>Total</span>
-                      <span style={{ color: "#a9760a" }}>{fmt(total)}</span>
+                      <span style={{ color: "#F0B838" }}>{fmt(total)}</span>
                     </div>
                   </div>
                   {notes && (

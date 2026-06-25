@@ -96,6 +96,10 @@
   box-sizing: border-box;
 }
 
+html {
+  background-color: rgb(var(--app-bg));
+}
+
 body {
   font-family: 'Inter', system-ui, sans-serif;
   background-color: rgb(var(--app-bg));
