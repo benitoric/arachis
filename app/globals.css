@@ -5,87 +5,89 @@
 @tailwind utilities;
 
 /* ──────────────────────────────────────────────────────────────────────────
-   Theme tokens. Tailwind colors (white/black/gray ramp + brand accents) all
-   resolve to these variables, so flipping `.dark` on <html> re-themes the
-   whole app — including the hundreds of existing bg-white / text-gray-*
-   utilities — without per-component edits.
+   Theme tokens as RGB *channel lists* (e.g. "255 255 255"). Tailwind colors
+   use rgb(var(--x) / <alpha-value>), so opacity modifiers (text-white/60,
+   bg-black/50, bg-gold/10) work AND the whole app re-themes when `.dark` is
+   toggled on <html> — including the existing bg-white / text-gray-* utilities.
    ────────────────────────────────────────────────────────────────────────── */
 :root {
   --sidebar-width: 260px;
 
   /* Neutral ramp — standard Tailwind gray values (light mode) */
-  --c-white: #ffffff;
-  --c-black: #0a0b0d;
-  --c-gray-50: #f9fafb;
-  --c-gray-100: #f3f4f6;
-  --c-gray-200: #e5e7eb;
-  --c-gray-300: #d1d5db;
-  --c-gray-400: #9ca3af;
-  --c-gray-500: #6b7280;
-  --c-gray-600: #4b5563;
-  --c-gray-700: #374151;
-  --c-gray-800: #1f2937;
-  --c-gray-900: #111827;
-  --c-gray-950: #030712;
+  --c-white: 255 255 255;
+  --c-black: 10 11 13;
+  --c-gray-50: 249 250 251;
+  --c-gray-100: 243 244 246;
+  --c-gray-200: 229 231 235;
+  --c-gray-300: 209 213 219;
+  --c-gray-400: 156 163 175;
+  --c-gray-500: 107 114 128;
+  --c-gray-600: 75 85 99;
+  --c-gray-700: 55 65 81;
+  --c-gray-800: 31 41 55;
+  --c-gray-900: 17 24 39;
+  --c-gray-950: 3 7 18;
 
   /* Brand accent for foreground use — deep, legible amber on light surfaces */
-  --accent: #a9760a;
-  --accent-strong: #875d07;
-  --accent-soft: #c99a3a;
+  --accent: 169 118 10;
+  --accent-strong: 135 93 7;
+  --accent-soft: 201 154 58;
 
   /* Soft amber wash, charcoal chrome, danger */
-  --soft: #fbefcf;
-  --soft-strong: #f6e2b0;
-  --charcoal: #1a1b1f;
-  --charcoal-2: #26282e;
-  --charcoal-deep: #101114;
-  --danger: #e8475f;
-  --danger-strong: #c0344a;
+  --soft: 251 239 207;
+  --soft-strong: 246 226 176;
+  --charcoal: 26 27 31;
+  --charcoal-2: 38 40 46;
+  --charcoal-deep: 16 17 20;
+  --danger: 232 71 95;
+  --danger-strong: 192 52 74;
 
-  /* App surfaces */
-  --app-bg: #f6f5f1;
-  --body-text: #1b1c20;
-  --scroll-track: #ece9e1;
-  --scroll-thumb: #cdbf9a;
-  --scroll-thumb-hover: #b8a878;
+  /* App surface */
+  --app-bg: 246 245 241;
+  --body-text: 27 28 32;
+
+  /* Fixed brand colors (do NOT flip between modes) */
+  --brand: 240 184 56;
+  --brand-light: 247 206 107;
+  --brand-dark: 210 154 30;
+  --ink: 27 28 32;
+  --ink-soft: 58 60 68;
+  --snow: 255 255 255; /* constant white — text on always-dark surfaces */
 
   color-scheme: light;
 }
 
 .dark {
   /* Neutral ramp — inverted so bg-white→dark surface and text-gray-900→light */
-  --c-white: #1e1f24;
-  --c-black: #f4f5f7;
-  --c-gray-50: #17181c;
-  --c-gray-100: #1f2024;
-  --c-gray-200: #2c2e35;
-  --c-gray-300: #3b3d45;
-  --c-gray-400: #595b63;
-  --c-gray-500: #9a9ca3;
-  --c-gray-600: #b4b6bd;
-  --c-gray-700: #d0d2d8;
-  --c-gray-800: #e6e7eb;
-  --c-gray-900: #f4f5f7;
-  --c-gray-950: #fafbfc;
+  --c-white: 30 31 36;
+  --c-black: 244 245 247;
+  --c-gray-50: 23 24 28;
+  --c-gray-100: 31 32 36;
+  --c-gray-200: 44 46 53;
+  --c-gray-300: 59 61 69;
+  --c-gray-400: 89 91 99;
+  --c-gray-500: 154 156 163;
+  --c-gray-600: 180 182 189;
+  --c-gray-700: 208 210 216;
+  --c-gray-800: 230 231 235;
+  --c-gray-900: 244 245 247;
+  --c-gray-950: 250 251 252;
 
   /* Brand accent — bright amber reads well on dark surfaces */
-  --accent: #f0b838;
-  --accent-strong: #f7ce6b;
-  --accent-soft: #d29a1e;
+  --accent: 240 184 56;
+  --accent-strong: 247 206 107;
+  --accent-soft: 210 154 30;
 
-  --soft: #2a2317;
-  --soft-strong: #3a3016;
-  --charcoal: #16171a;
-  --charcoal-2: #212329;
-  --charcoal-deep: #0e0f12;
-  --danger: #f1596e;
-  --danger-strong: #e8475f;
+  --soft: 42 35 23;
+  --soft-strong: 58 48 22;
+  --charcoal: 22 23 26;
+  --charcoal-2: 33 35 41;
+  --charcoal-deep: 14 15 18;
+  --danger: 241 89 110;
+  --danger-strong: 232 71 95;
 
-  --app-bg: #121316;
-  --body-text: #f2f0ea;
-  --scroll-track: #1f2024;
-  --scroll-thumb: #3a3d45;
-  --scroll-thumb-hover: #4b4e57;
+  --app-bg: 18 19 22;
+  --body-text: 242 240 234;
 
   color-scheme: dark;
 }
@@ -96,8 +98,8 @@
 
 body {
   font-family: 'Inter', system-ui, sans-serif;
-  background-color: var(--app-bg);
-  color: var(--body-text);
+  background-color: rgb(var(--app-bg));
+  color: rgb(var(--body-text));
 }
 
 /* Re-theme softly when toggling modes */
@@ -113,14 +115,14 @@ body,
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--scroll-track);
+  background: rgb(var(--c-gray-200));
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--scroll-thumb);
+  background: rgb(var(--accent) / 0.55);
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--scroll-thumb-hover);
+  background: rgb(var(--accent) / 0.8);
 }

@@ -90,7 +90,7 @@ export default function Sidebar() {
     <>
       {/* Botón hamburguesa — solo mobile */}
       <button
-        className="lg:hidden fixed top-3 left-3 z-50 w-10 h-10 flex items-center justify-center rounded-xl shadow-lg text-white"
+        className="lg:hidden fixed top-3 left-3 z-50 w-10 h-10 flex items-center justify-center rounded-xl shadow-lg text-snow"
         style={{ backgroundColor: "#1a1b1f" }}
         onClick={() => setOpen(true)}
         aria-label="Abrir menú"
@@ -101,7 +101,7 @@ export default function Sidebar() {
       {/* Overlay oscuro — solo mobile cuando está abierto */}
       {open && (
         <div
-          className="lg:hidden fixed inset-0 bg-black/50 z-30"
+          className="lg:hidden fixed inset-0 bg-ink/50 z-30"
           onClick={() => setOpen(false)}
         />
       )}
@@ -113,7 +113,7 @@ export default function Sidebar() {
         style={{ backgroundColor: "#1a1b1f" }}
       >
         {/* Logo + botón cerrar (mobile) */}
-        <div className="flex items-center justify-between px-4 py-6 border-b border-white/10">
+        <div className="flex items-center justify-between px-4 py-6 border-b border-snow/10">
           <Image
             src="/logo.png"
             alt="Arachis"
@@ -124,7 +124,7 @@ export default function Sidebar() {
             priority
           />
           <button
-            className="lg:hidden text-white/60 hover:text-white p-1 rounded-lg hover:bg-white/10 transition-colors"
+            className="lg:hidden text-snow/60 hover:text-snow p-1 rounded-lg hover:bg-snow/10 transition-colors"
             onClick={() => setOpen(false)}
             aria-label="Cerrar menú"
           >
@@ -149,7 +149,7 @@ export default function Sidebar() {
                       ${
                         active
                           ? "text-ink shadow-sm"
-                          : "text-white/60 hover:text-white hover:bg-white/10"
+                          : "text-snow/60 hover:text-snow hover:bg-snow/10"
                       }
                     `}
                     style={active ? { backgroundColor: "#F0B838" } : undefined}
@@ -157,12 +157,12 @@ export default function Sidebar() {
                     <Icon
                       size={18}
                       className={`flex-shrink-0 ${
-                        active ? "text-ink" : "text-white/40 group-hover:text-white"
+                        active ? "text-ink" : "text-snow/40 group-hover:text-snow"
                       }`}
                     />
                     <span className="flex-1">{item.label}</span>
                     {showBadge && (
-                      <span className="flex-shrink-0 min-w-[18px] h-[18px] bg-amber-500 text-white text-[10px] font-bold rounded-full flex items-center justify-center px-1">
+                      <span className="flex-shrink-0 min-w-[18px] h-[18px] bg-amber-500 text-snow text-[10px] font-bold rounded-full flex items-center justify-center px-1">
                         {portalCount > 99 ? "99+" : portalCount}
                       </span>
                     )}
@@ -177,11 +177,11 @@ export default function Sidebar() {
         </nav>
 
         {/* Theme + Logout */}
-        <div className="p-3 border-t border-white/10 space-y-0.5">
+        <div className="p-3 border-t border-snow/10 space-y-0.5">
           <ThemeToggle />
           <button
             onClick={handleLogout}
-            className="flex items-center gap-3 w-full px-3 py-2.5 rounded-lg text-sm font-medium text-white/50 hover:text-white hover:bg-white/10 transition-all duration-150"
+            className="flex items-center gap-3 w-full px-3 py-2.5 rounded-lg text-sm font-medium text-snow/50 hover:text-snow hover:bg-snow/10 transition-all duration-150"
           >
             <LogOut size={18} />
             <span>Cerrar sesión</span>

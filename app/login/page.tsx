@@ -47,7 +47,7 @@ export default function LoginPage() {
             className="object-contain mb-3"
             priority
           />
-          <p className="text-white/60 text-sm">Sistema de gestión interno</p>
+          <p className="text-snow/60 text-sm">Sistema de gestión interno</p>
         </div>
 
         {/* Form Card */}
@@ -111,7 +111,7 @@ export default function LoginPage() {
           </form>
         </div>
 
-        <p className="text-center text-white/40 text-xs mt-6">
+        <p className="text-center text-snow/40 text-xs mt-6">
           © 2025 Arachis — Todos los derechos reservados
         </p>
       </div>

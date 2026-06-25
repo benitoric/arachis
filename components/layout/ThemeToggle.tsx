@@ -33,7 +33,7 @@ export default function ThemeToggle() {
       onClick={toggle}
       aria-label={dark ? "Activar modo claro" : "Activar modo oscuro"}
       title={dark ? "Modo claro" : "Modo oscuro"}
-      className="flex items-center gap-3 w-full px-3 py-2.5 rounded-lg text-sm font-medium text-white/50 hover:text-white hover:bg-white/10 transition-all duration-150"
+      className="flex items-center gap-3 w-full px-3 py-2.5 rounded-lg text-sm font-medium text-snow/50 hover:text-snow hover:bg-snow/10 transition-all duration-150"
     >
       {/* Render a stable icon until mounted to avoid hydration mismatch */}
       {mounted && dark ? <Sun size={18} /> : <Moon size={18} />}
