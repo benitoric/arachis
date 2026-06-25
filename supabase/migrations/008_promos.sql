@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS public.promo_settings (
 -- Defaults
 INSERT INTO public.promo_settings (key, value) VALUES
   ('phone',      '381 206 7869'),
-  ('portal_url', 'https://www.arachis.com.ar/pedidos')
+  ('portal_url', 'https://app.arachis.com.ar/pedidos')
 ON CONFLICT (key) DO NOTHING;
 
 -- 2. Placas guardadas
